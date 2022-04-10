@@ -239,7 +239,7 @@ class QCMD():
                 comfile = wdir+file_name+str(Nbase+j+1+Ntimes*i).zfill(5)
                 self.writeCom(self.nproc,self.keywords,comfile,atom,coord)
                 print('Submit %s.com to g09'%(comfile))
-                os.system('$GAUSS_EXEDIR/g09 %s.com'%(comfile))
+                os.system(self.gauss_path+' %s.com'%(comfile))
                 energy, forces, charges, dipole = self.readGaussOut(comfile+'.log',len(atom))
                 
                 coord_sample.append(coord)
