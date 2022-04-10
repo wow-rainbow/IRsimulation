@@ -57,7 +57,7 @@ class IRSpectrumGenerator():
         fig, ax = plt.subplots(1,1)
         ax.plot(freqs[freqs<4000], pows[freqs<4000])
         ax.invert_xaxis()
-        ax.xlabel('$cm^{-1}$')
-        ax.ylabel('$Absorption$')
+        plt.xlabel('$cm^{-1}$')
+        plt.ylabel('$Transmition$')
 
         plt.savefig(os.path.join(self.working_dir,self.index+'/ir.png'))
