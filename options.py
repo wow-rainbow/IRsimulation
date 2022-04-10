@@ -103,8 +103,8 @@ class IRSS_ML():
 
         kwargs03 = {
             'working_dir' : args['working_dir'],
-            'mlatom'      : args['mlatompy'],
-            'nproc'       : args['nproc']
+            'mlatom'      : args['mlatompy']
+            #'nproc'       : args['nproc']
         }
 
         kwargs04 = {
